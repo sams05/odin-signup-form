@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Orbitron;
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --side-width: 40vw;
+    --page-height: 100vh;
+}
+
+.page-container {
+    /* Place side and main content side by side */
+    display: flex;
+    height: var(--page-height);
+}
+
+p a {
+    color: inherit;
+}
+
+.side {
+    width: var(--side-width);
+    background-image: url(images/hot-air-balloons.jpeg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(0.2*var(--page-height));
+    font-family: Orbitron, sans-serif;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.logo > img {
+    /* Set minimum image width */
+    width: max(100px, 0.25*var(--side-width));
+    height: auto;
+}
+
+.logo > h1 {
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+.side > .caption {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+}
