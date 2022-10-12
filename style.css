@@ -69,7 +69,7 @@ p a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
 .main > * {
@@ -92,4 +92,79 @@ p a {
 
 .main > form {
     background-color: white;
+}
+
+form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form > h3 {
+    margin-bottom: 20px;
+}
+
+.form-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: calc(0.3 * var(--main-width));
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-field > label {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: .7rem;
+}
+
+.form-field > input {
+    width: 225px;
+    height: 25px;
+    padding: 2px 10px;
+}
+
+button,
+input {
+    /* By default, widgets don't inherit typographical styles */
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 175px;
+    height: 40px;
+    background-color: rgb(89 109 72);
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 2px 2px rgb(70 90 60);
+    border: 2px solid black;
+}
+
+.signup > button[type="submit"] {
+    margin-top: 25px;
+}
+
+.signup > p:last-child {
+    margin-top: 30px;
+}
+
+.signup > p:last-child > a {
+    color: rgb(96 116 81);
+    /* Get rid of default underline */
+    text-decoration: none;
 }
