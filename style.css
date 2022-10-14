@@ -13,6 +13,7 @@
     --page-height: 100vh;
     --side-width: 40vw;
     --main-width: calc(100vw - var(--side-width));
+    --input-width: 225px;
 }
 
 .page-container {
@@ -97,6 +98,7 @@ p a {
 form {
     padding-top: 20px;
     padding-bottom: 20px;
+    box-shadow: 0 5px 5px rgb(200, 200, 200);
 }
 
 form > h3 {
@@ -128,9 +130,30 @@ form > h3 {
 }
 
 .form-field > input {
-    width: 225px;
+    width: var(--input-width);
     height: 25px;
     padding: 2px 10px;
+    appearance: none;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 2px;
+}
+
+.form-field > input:focus {
+    box-shadow: 2px 2px 2px rgb(200, 200, 200);
+    border-color: rgb(20, 5, 200);
+}
+
+.form-field > input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+/* Message for invalid passwords */
+input.error:invalid:not(:placeholder-shown) + span::after {
+    content: "* Password must contain one uppercase letter, one lowercase letter, a number or special character, and min 8 characters";
+    display: block;
+    font-size: .7rem;
+    color: red;
+    width: var(--input-width);
 }
 
 button,

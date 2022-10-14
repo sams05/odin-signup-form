@@ -33,26 +33,34 @@
                 <div class="form-field-container">
                     <div class="form-row">
                         <div class="form-field">
-                            <label for="">first name</label><input type="text">
+                            <label for="fname">first name</label>
+                            <input id="fname" name="fname" type="text" placeholder=" " required>
                         </div>
                         <div class="form-field">
-                            <label for="">last name</label><input type="text">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label for="">email</label><input type="text">
-                        </div>
-                        <div class="form-field">
-                            <label for="">phone number</label><input type="text">
+                            <label for="lname">last name</label>
+                            <input id="lname" name="lname" type="text" placeholder=" " required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-field">
-                            <label for="">password</label><input type="text">
+                            <label for="email">email</label>
+                            <input id="email" name="email" type="email" placeholder=" " required>
                         </div>
                         <div class="form-field">
-                            <label for="">confirm password</label><input type="text">
+                            <label for="phone">phone number</label>
+                            <input id="phone" name="phone" type="tel" maxlength="15" placeholder=" " required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="pass">password</label>
+                            <input id="pass" class="error" name="pass" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder=" " required>
+                            <span></span>
+                        </div>
+                        <div class="form-field">
+                            <label for="pass-confirm">confirm password</label>
+                            <input id="pass-confirm" class="error" name="pass-confirm" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder=" " required>
+                            <span></span>
                         </div>
                     </div>
                 </div>
